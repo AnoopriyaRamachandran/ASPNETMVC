@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETMVC", "ASPNETMVC\ASPNETMVC.csproj", "{E7BA1A81-09CF-43BF-8DD2-AE70DD79C294}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerCloud.DataAccessLayer", "..\CareerCloud\CareerCloud.DataAccessLayer\CareerCloud.DataAccessLayer.csproj", "{143C3AEB-713E-4E25-A845-8C63E9F64968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerCloud.EntityFrameworkDataAccess", "..\CareerCloud\CareerCloud.EntityFrameworkDataAccess\CareerCloud.EntityFrameworkDataAccess.csproj", "{47174D76-603F-4D8C-BB7F-83A9402C02AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerCloud.Pocos", "..\CareerCloud\CareerCloud.Pocos\CareerCloud.Pocos.csproj", "{CD123328-D336-4FFB-AF42-50263474E057}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{E7BA1A81-09CF-43BF-8DD2-AE70DD79C294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7BA1A81-09CF-43BF-8DD2-AE70DD79C294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7BA1A81-09CF-43BF-8DD2-AE70DD79C294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143C3AEB-713E-4E25-A845-8C63E9F64968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143C3AEB-713E-4E25-A845-8C63E9F64968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143C3AEB-713E-4E25-A845-8C63E9F64968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143C3AEB-713E-4E25-A845-8C63E9F64968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47174D76-603F-4D8C-BB7F-83A9402C02AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47174D76-603F-4D8C-BB7F-83A9402C02AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47174D76-603F-4D8C-BB7F-83A9402C02AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47174D76-603F-4D8C-BB7F-83A9402C02AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD123328-D336-4FFB-AF42-50263474E057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD123328-D336-4FFB-AF42-50263474E057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD123328-D336-4FFB-AF42-50263474E057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD123328-D336-4FFB-AF42-50263474E057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

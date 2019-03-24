@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -147,7 +153,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApplicantEducationController.cs" />
+    <Compile Include="Controllers\ApplicantJobApplicationController.cs" />
+    <Compile Include="Controllers\ApplicantProfileController.cs" />
+    <Compile Include="Controllers\ApplicantResumeController.cs" />
+    <Compile Include="Controllers\ApplicantSkillController.cs" />
+    <Compile Include="Controllers\ApplicantWorkHistoryController.cs" />
+    <Compile Include="Controllers\CompanyDescriptionController.cs" />
+    <Compile Include="Controllers\CompanyJobController.cs" />
+    <Compile Include="Controllers\CompanyJobDescriptionController.cs" />
+    <Compile Include="Controllers\CompanyJobEducationController.cs" />
+    <Compile Include="Controllers\CompanyJobSkillController.cs" />
+    <Compile Include="Controllers\CompanyLocationController.cs" />
+    <Compile Include="Controllers\CompanyProfileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SecurityLoginController.cs" />
+    <Compile Include="Controllers\SecurityLoginsLogController.cs" />
+    <Compile Include="Controllers\SecurityLoginsRoleController.cs" />
+    <Compile Include="Controllers\SecurityRoleController.cs" />
+    <Compile Include="Controllers\SystemCountryCodeController.cs" />
+    <Compile Include="Controllers\SystemLanguageCodeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +217,101 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ApplicantEducation\Create.cshtml" />
+    <Content Include="Views\ApplicantEducation\Delete.cshtml" />
+    <Content Include="Views\ApplicantEducation\Details.cshtml" />
+    <Content Include="Views\ApplicantEducation\Edit.cshtml" />
+    <Content Include="Views\ApplicantEducation\Index.cshtml" />
+    <Content Include="Views\ApplicantJobApplication\Create.cshtml" />
+    <Content Include="Views\ApplicantJobApplication\Delete.cshtml" />
+    <Content Include="Views\ApplicantJobApplication\Details.cshtml" />
+    <Content Include="Views\ApplicantJobApplication\Edit.cshtml" />
+    <Content Include="Views\ApplicantJobApplication\Index.cshtml" />
+    <Content Include="Views\ApplicantProfile\Create.cshtml" />
+    <Content Include="Views\ApplicantProfile\Delete.cshtml" />
+    <Content Include="Views\ApplicantProfile\Details.cshtml" />
+    <Content Include="Views\ApplicantProfile\Edit.cshtml" />
+    <Content Include="Views\ApplicantProfile\Index.cshtml" />
+    <Content Include="Views\ApplicantResume\Create.cshtml" />
+    <Content Include="Views\ApplicantResume\Delete.cshtml" />
+    <Content Include="Views\ApplicantResume\Details.cshtml" />
+    <Content Include="Views\ApplicantResume\Edit.cshtml" />
+    <Content Include="Views\ApplicantResume\Index.cshtml" />
+    <Content Include="Views\ApplicantSkill\Create.cshtml" />
+    <Content Include="Views\ApplicantSkill\Delete.cshtml" />
+    <Content Include="Views\ApplicantSkill\Details.cshtml" />
+    <Content Include="Views\ApplicantSkill\Edit.cshtml" />
+    <Content Include="Views\ApplicantSkill\Index.cshtml" />
+    <Content Include="Views\ApplicantWorkHistory\Create.cshtml" />
+    <Content Include="Views\ApplicantWorkHistory\Delete.cshtml" />
+    <Content Include="Views\ApplicantWorkHistory\Details.cshtml" />
+    <Content Include="Views\ApplicantWorkHistory\Edit.cshtml" />
+    <Content Include="Views\ApplicantWorkHistory\Index.cshtml" />
+    <Content Include="Views\CompanyDescription\Create.cshtml" />
+    <Content Include="Views\CompanyDescription\Delete.cshtml" />
+    <Content Include="Views\CompanyDescription\Details.cshtml" />
+    <Content Include="Views\CompanyDescription\Edit.cshtml" />
+    <Content Include="Views\CompanyDescription\Index.cshtml" />
+    <Content Include="Views\CompanyJobDescription\Create.cshtml" />
+    <Content Include="Views\CompanyJobDescription\Delete.cshtml" />
+    <Content Include="Views\CompanyJobDescription\Details.cshtml" />
+    <Content Include="Views\CompanyJobDescription\Edit.cshtml" />
+    <Content Include="Views\CompanyJobDescription\Index.cshtml" />
+    <Content Include="Views\CompanyJobEducation\Create.cshtml" />
+    <Content Include="Views\CompanyJobEducation\Delete.cshtml" />
+    <Content Include="Views\CompanyJobEducation\Details.cshtml" />
+    <Content Include="Views\CompanyJobEducation\Edit.cshtml" />
+    <Content Include="Views\CompanyJobEducation\Index.cshtml" />
+    <Content Include="Views\CompanyJob\Create.cshtml" />
+    <Content Include="Views\CompanyJob\Delete.cshtml" />
+    <Content Include="Views\CompanyJob\Details.cshtml" />
+    <Content Include="Views\CompanyJob\Edit.cshtml" />
+    <Content Include="Views\CompanyJob\Index.cshtml" />
+    <Content Include="Views\CompanyJobSkill\Create.cshtml" />
+    <Content Include="Views\CompanyJobSkill\Delete.cshtml" />
+    <Content Include="Views\CompanyJobSkill\Details.cshtml" />
+    <Content Include="Views\CompanyJobSkill\Edit.cshtml" />
+    <Content Include="Views\CompanyJobSkill\Index.cshtml" />
+    <Content Include="Views\CompanyLocation\Create.cshtml" />
+    <Content Include="Views\CompanyLocation\Delete.cshtml" />
+    <Content Include="Views\CompanyLocation\Details.cshtml" />
+    <Content Include="Views\CompanyLocation\Edit.cshtml" />
+    <Content Include="Views\CompanyLocation\Index.cshtml" />
+    <Content Include="Views\CompanyProfile\Create.cshtml" />
+    <Content Include="Views\CompanyProfile\Delete.cshtml" />
+    <Content Include="Views\CompanyProfile\Details.cshtml" />
+    <Content Include="Views\CompanyProfile\Edit.cshtml" />
+    <Content Include="Views\CompanyProfile\Index.cshtml" />
+    <Content Include="Views\SecurityLogin\Create.cshtml" />
+    <Content Include="Views\SecurityLogin\Delete.cshtml" />
+    <Content Include="Views\SecurityLogin\Details.cshtml" />
+    <Content Include="Views\SecurityLogin\Edit.cshtml" />
+    <Content Include="Views\SecurityLogin\Index.cshtml" />
+    <Content Include="Views\SecurityLoginsLog\Create.cshtml" />
+    <Content Include="Views\SecurityLoginsLog\Delete.cshtml" />
+    <Content Include="Views\SecurityLoginsLog\Details.cshtml" />
+    <Content Include="Views\SecurityLoginsLog\Edit.cshtml" />
+    <Content Include="Views\SecurityLoginsLog\Index.cshtml" />
+    <Content Include="Views\SecurityLoginsRole\Create.cshtml" />
+    <Content Include="Views\SecurityLoginsRole\Delete.cshtml" />
+    <Content Include="Views\SecurityLoginsRole\Details.cshtml" />
+    <Content Include="Views\SecurityLoginsRole\Edit.cshtml" />
+    <Content Include="Views\SecurityLoginsRole\Index.cshtml" />
+    <Content Include="Views\SecurityRole\Create.cshtml" />
+    <Content Include="Views\SecurityRole\Delete.cshtml" />
+    <Content Include="Views\SecurityRole\Details.cshtml" />
+    <Content Include="Views\SecurityRole\Edit.cshtml" />
+    <Content Include="Views\SecurityRole\Index.cshtml" />
+    <Content Include="Views\SystemCountryCode\Create.cshtml" />
+    <Content Include="Views\SystemCountryCode\Delete.cshtml" />
+    <Content Include="Views\SystemCountryCode\Details.cshtml" />
+    <Content Include="Views\SystemCountryCode\Edit.cshtml" />
+    <Content Include="Views\SystemCountryCode\Index.cshtml" />
+    <Content Include="Views\SystemLanguageCode\Create.cshtml" />
+    <Content Include="Views\SystemLanguageCode\Delete.cshtml" />
+    <Content Include="Views\SystemLanguageCode\Details.cshtml" />
+    <Content Include="Views\SystemLanguageCode\Edit.cshtml" />
+    <Content Include="Views\SystemLanguageCode\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -209,6 +329,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CareerCloud\CareerCloud.DataAccessLayer\CareerCloud.DataAccessLayer.csproj">
+      <Project>{143c3aeb-713e-4e25-a845-8c63e9f64968}</Project>
+      <Name>CareerCloud.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CareerCloud\CareerCloud.EntityFrameworkDataAccess\CareerCloud.EntityFrameworkDataAccess.csproj">
+      <Project>{47174d76-603f-4d8c-bb7f-83a9402c02ad}</Project>
+      <Name>CareerCloud.EntityFrameworkDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CareerCloud\CareerCloud.Pocos\CareerCloud.Pocos.csproj">
+      <Project>{cd123328-d336-4ffb-af42-50263474e057}</Project>
+      <Name>CareerCloud.Pocos</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
